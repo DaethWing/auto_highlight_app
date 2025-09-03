@@ -11,3 +11,4 @@ passlib[bcrypt]
 python-jose
 stripe
 ffmpeg-python
+moviepy
