@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: auto-highlight-app
+    env: python
+    region: oregon
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn app:app --host 0.0.0.0 --port 10000"
+    envVars:
+      - key: JWT_SECRET
+        value: "b82c3a7a5f9e49d6a8b4f8a2f3b6e14d"
+      - key: STRIPE_SECRET_KEY
+        value: "sk_test_51NnXYZkExampleKey00000000000000000"
+      - key: STRIPE_PRICE_ID
+        value: "price_1NnXYZkExamplePrice000000000"
+      - key: DATABASE_URL
+        value: "sqlite:///./db.sqlite3"
+
+ls
+
+File Name to Write: render.yaml
+
