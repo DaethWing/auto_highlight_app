@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Video Uploader</title>
+</head>
+<body>
+<h1>Upload Your Video</h1>
+<form action="/process" method="post" enctype="multipart/form-data">
+<input type="file" name="file" accept="video/*"><br>
+<label><input type="checkbox" name="background_music" checked> Add Background Music</label><br>
+<label><input type="checkbox" name="captions" checked> Add Captions</label><br>
+<button type="submit">Make Video!</button>
+</form>
+</body>
+</html>

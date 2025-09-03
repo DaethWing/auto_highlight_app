@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+moviepy
+opencv-python-headless
+numpy
+python-multipart
+pydub
+openai-whisper
+sqlalchemy
+passlib[bcrypt]
+python-jose
+stripe
+ffmpeg-python
