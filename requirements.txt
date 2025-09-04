@@ -2,3 +2,4 @@ fastapi
 uvicorn
 moviepy
 python-multipart
+imageio[ffmpeg]

@@ -87,18 +87,17 @@ async def upload_video(
     if music:
         music_path = "presets/preset1.mp3"
         if not os.path.exists(music_path):
-            # Generate a placeholder silent track if no preset exists
+            # Generate placeholder silence if missing
             import subprocess
             subprocess.run([
-                "ffmpeg", "-f", "lavfi", "-i", f"anullsrc=channel_layout=stereo:sample_rate=44100",
+                "ffmpeg", "-f", "lavfi", "-i", "anullsrc=channel_layout=stereo:sample_rate=44100",
                 "-t", str(int(clip.duration)),
                 music_path
             ])
         audio = AudioFileClip(music_path).volumex(0.2)
-        final_audio = clip.audio.set_duration(clip.duration).fx(lambda a: a)
         clip = clip.set_audio(audio.set_duration(clip.duration))
 
-    # Write output
+    # Write output video
     clip.write_videofile(output_path, codec="libx264")
 
     return FileResponse(output_path, media_type="video/mp4", filename="processed_video.mp4")
