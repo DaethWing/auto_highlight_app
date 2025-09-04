@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: auto-highlight-app
+    env: docker
+    plan: free
+    autoDeploy: false
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 10000
