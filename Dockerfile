@@ -1,7 +1,6 @@
-# Use official Python runtime
 FROM python:3.11-slim
 
-# Install system dependencies including ffmpeg
+# Install ffmpeg dependencies
 RUN apt-get update && apt-get install -y \
     ffmpeg \
     libsm6 \

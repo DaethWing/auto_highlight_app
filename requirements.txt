@@ -1,12 +1,4 @@
 fastapi
 uvicorn
+moviepy
 python-multipart
-jinja2
-stripe
-moviepy==1.0.3
-pydub
-ffmpeg-python
-imageio==2.31.1
-imageio-ffmpeg==0.4.8
-aiofiles
-requests
